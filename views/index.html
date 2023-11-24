@@ -1,0 +1,13 @@
+{{ template "header" . }}
+<h1>TODO List</h1>
+<ul>
+    <li><a href="/list">登録済みタスク一覧</a></li>
+</ul>
+<form action = "/user/new" method="get">
+    <input type="submit" value="ユーザ登録">
+</form>
+<form action="/login" method="get">
+    <input type="submit" value="ログイン">
+</form>
+<p><a href="/user/delete">ユーザー退会</a></p>
+{{ template "footer" }}

@@ -1,0 +1,17 @@
+{{ template "header" . }}
+<h1>ユーザ編集</h1>
+{{ if .Error }}
+<p><font color="#FF0000">{{ .Error }}</font></p>
+{{ end }}
+<div style="display:inline-flex">
+    <form action="edit/name" method="GET">
+        <input type="submit" value="ユーザー変更">
+    </form>
+    <form action="edit/password" method="GET">
+        <input type="submit" value="パスワード変更">
+    </form>
+</div>
+<form action="/list" method="GET">
+    <input type="submit" value="戻る">
+</form>
+{{ template "footer" }}
